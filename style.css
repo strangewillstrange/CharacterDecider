@@ -2,7 +2,7 @@
   --primary: #831818;
   --primary-lighten: #ce2727;
   --primary-darken: #580f0f;
-  --bg: #b33939;
+  --bg: #cecece;
   --shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
   --corners: 4px;
   --text-color: #221f1f;
@@ -52,6 +52,11 @@ button {
 
 button:hover {
   background-color: var(--primary-darken);
+}
+
+.current-player-text {
+  text-decoration-line: underline;
+  font-weight: bold;
 }
 
 .game-container {

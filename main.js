@@ -16,13 +16,28 @@ function setCharacter(event) {
     saveCharacters();
   }
 
+  let template = "";
+
+  template += `
+    <div class="d-flex space-between current-player-text">
+    <span>
+    ${currentCharacter.name}
+    </span>
+    </div>
+    `;
+
+  document.getElementById("current").innerHTML = template;
+
   form.reset();
-  document.getElementById("characters").classList.remove("hidden");
-  form.classList.add("hidden");
+  hideElementById("select-character");
+  showElementById("current-character")
+  showElementById("race");
   draw();
   drawCharacterList();
-  
+}
 
+function changeCharacter(event){
+  location.reload();
 }
 
 function saveCharacters() {
@@ -57,6 +72,14 @@ function draw() {
   let playerNameElem = document.getElementById("character-name");
 
   playerNameElem.innerText = currentCharacter.name;
+}
+
+function hideElementById(id){
+  document.getElementById(id).classList.add("hidden");
+}
+
+function showElementById(id){
+  document.getElementById(id).classList.remove("hidden");
 }
 
 drawCharacterList();
