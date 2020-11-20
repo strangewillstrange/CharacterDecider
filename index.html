@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D Character Decider</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container shadow">
+      <h2>D&D Character Decider</h2>
+    </div>
+  </header>
+
+  <main>
+    <section id='characters'>
+      <div class="card text-light bg-dark">
+        <div>Saved Characters: </div>
+        <div class="d-flex space-between">
+          <div>
+            <span id="character-name"></span>
+          </div>
+    </section>
+
+    <section id='Current Character'>
+      <div class="card text-light bg-dark">
+        <form class='d-flex space-between' id='name-form' onsubmit="setCharacter(event)">
+          <div>
+            <label for="name">
+              <i class="fa fa-shield" aria-hidden="true"></i>
+              <span>Select Character: </span>
+            </label>
+            <input type="text" name="characterName" required>
+          </div>
+          <button type='submit'>Ok</button>
+      </div>
+      </form>
+
+
+      </div>
+      </div>
+
+      <section id='race' class="card container hidden">
+        <form class='d-flex' id='race-form' onsubmit="setRace(event)">
+          <div class="card bg-dark">
+            <div>
+              <select name="race-picker" id="race-picker">
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Half-Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="human">Human</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="halfling">Halfling</option>
+                <option value="tiefling">Tiefling</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+      </main>
+
+        <script src="main.js">
+        </script>
+</body>
+
+</html>
